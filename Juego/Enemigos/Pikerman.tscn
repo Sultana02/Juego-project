@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Juego/Enemigos/Pikerman.gd" type="Script" id=1]
+[ext_resource path="res://recursos/Enemies/spikeMan_walk2.png" type="Texture" id=2]
+[ext_resource path="res://recursos/Enemies/spikeMan_walk1.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "caminar",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 9.20508, 1.1806 )
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 15.0266
+height = 7.20328
+
+[node name="Pikerman" type="KinematicBody2D"]
+z_index = 35
+z_as_relative = false
+collision_layer = 8
+collision_mask = 4
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -0.165237, -31.7372 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 1 )
+animation = "caminar"
+
+[node name="CollisionPies" type="CollisionShape2D" parent="."]
+position = Vector2( 0.0164042, -1.89787 )
+shape = SubResource( 2 )
+
+[node name="DetectorVacio" type="RayCast2D" parent="."]
+modulate = Color( 0.0313726, 0.0235294, 0.0235294, 1 )
+position = Vector2( 35, -5 )
+z_index = 35
+z_as_relative = false
+enabled = true
+cast_to = Vector2( 0, 20 )
+collision_mask = 4
+
+[node name="DetectaPared" type="RayCast2D" parent="."]
+modulate = Color( 0.0313726, 0.0235294, 0.0235294, 1 )
+position = Vector2( 22.2307, -22.5933 )
+z_index = 35
+z_as_relative = false
+enabled = true
+cast_to = Vector2( 20, 0 )
+collision_mask = 4
+
+[node name="DetectaJugador" type="Area2D" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 0, -2.71765 )
+collision_layer = 32
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectaJugador"]
+position = Vector2( 0.0170708, -18.6422 )
+shape = SubResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DetectaJugador"]
+polygon = PoolVector2Array( 0.0256233, -60.1214, -7.49623, -36.9671, 6.69718, -37.1634 )
+
+[connection signal="body_entered" from="DetectaJugador" to="." method="_on_DetectaJugador_body_entered"]

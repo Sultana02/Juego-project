@@ -1,0 +1,260 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Juego/Menus/Botones/BotonSalir.gd" type="Script" id=1]
+[ext_resource path="res://recursos/Fonts/Kenney Blocks.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://recursos/Fonts/Kenney Future.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://recursos/Players/bunny2_jump.png" type="Texture" id=4]
+[ext_resource path="res://Juego/Menus/MenuVictoria.gd" type="Script" id=5]
+[ext_resource path="res://recursos/Environment/sprite_0097.png" type="Texture" id=6]
+[ext_resource path="res://Juego/Menus/Botones/BotonMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://recursos/Environment/sun.png" type="Texture" id=8]
+[ext_resource path="res://recursos/Environment/sprite_0093.png" type="Texture" id=9]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.490196, 0.298039, 0.388235, 1 )
+border_width_left = 4
+border_width_right = 4
+border_width_bottom = 6
+border_color = Color( 0.8, 0.537255, 0.537255, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+shadow_color = Color( 0.901961, 0.815686, 0.858824, 1 )
+shadow_size = 5
+shadow_offset = Vector2( 1, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.160784, 0.117647, 0.141176, 1 )
+border_width_left = 4
+border_width_bottom = 6
+border_color = Color( 0.960784, 0.894118, 0.894118, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+shadow_color = Color( 0.901961, 0.815686, 0.858824, 1 )
+shadow_size = 5
+shadow_offset = Vector2( 1, 0 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 18
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.25098, 0.164706, 0.176471, 1 )
+border_width_left = 4
+border_width_right = 4
+border_width_bottom = 6
+border_color = Color( 0.85098, 0.698039, 0.698039, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+shadow_color = Color( 0.8, 0.666667, 0.666667, 1 )
+shadow_size = 5
+shadow_offset = Vector2( 1, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.00392157, 0.00392157, 0.00392157, 1 )
+border_width_right = 1
+border_width_bottom = 6
+border_color = Color( 1, 0.976471, 0.976471, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+shadow_color = Color( 0.878431, 0.698039, 0.698039, 1 )
+shadow_size = 5
+shadow_offset = Vector2( 1, 0 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.290196, 0.0117647, 0.168627, 1 )
+border_width_right = 1
+border_width_bottom = 6
+border_color = Color( 0.917647, 0.815686, 0.815686, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+shadow_color = Color( 0.878431, 0.796078, 0.831373, 1 )
+shadow_size = 5
+shadow_offset = Vector2( 1, 0 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 18
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 50
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 30
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 2 )
+
+[node name="MenuVictoria" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -1.69415
+margin_bottom = -1.69415
+color = Color( 0.662745, 0.85098, 0.988235, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ramas" type="Sprite" parent="."]
+modulate = Color( 0.560784, 0.435294, 0.435294, 1 )
+position = Vector2( 1038.09, 370.281 )
+scale = Vector2( 0.5, 0.68 )
+texture = ExtResource( 9 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 372.861, 362.031 )
+texture = ExtResource( 4 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -434.49
+margin_top = -495.078
+margin_right = -187.49
+margin_bottom = -176.078
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonMenuPrincipal" parent="VBoxContainer" instance=ExtResource( 7 )]
+margin_right = 247.0
+margin_bottom = 149.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+margin_top = 153.0
+margin_right = 247.0
+margin_bottom = 157.0
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+margin_top = 161.0
+margin_right = 247.0
+margin_bottom = 165.0
+
+[node name="BotonSalir" type="Button" parent="VBoxContainer"]
+margin_top = 169.0
+margin_right = 247.0
+margin_bottom = 319.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+text = "SALIR"
+clip_text = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 95.1529
+margin_top = 54.7438
+margin_right = 693.152
+margin_bottom = 144.743
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+modulate = Color( 0.596078, 0.0862745, 0.207843, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -196.0
+margin_top = -38.0
+margin_right = 196.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 8 )
+text = "HA GANADO!!!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelPuntaje" type="Panel" parent="."]
+margin_left = 219.727
+margin_top = 535.301
+margin_right = 494.727
+margin_bottom = 625.301
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="PanelPuntaje"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 101.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Puntaje" type="Label" parent="PanelPuntaje"]
+modulate = Color( 0.596078, 0.0862745, 0.207843, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 15.0
+margin_top = -22.9996
+margin_right = 231.0
+margin_bottom = 23.0004
+custom_fonts/font = SubResource( 9 )
+text = "PUNTAJE: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Imagenes" type="Node" parent="."]
+
+[node name="sprite_0097" type="Sprite" parent="Imagenes"]
+modulate = Color( 0.898039, 0.521569, 0.521569, 1 )
+position = Vector2( 102.962, 121.551 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 6 )
+
+[node name="sprite_0098" type="Sprite" parent="Imagenes"]
+modulate = Color( 0.835294, 0.513726, 0.513726, 1 )
+position = Vector2( 693.922, 108.944 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 6 )
+
+[node name="sprite_0099" type="Sprite" parent="Imagenes"]
+modulate = Color( 0.835294, 0.513726, 0.513726, 1 )
+position = Vector2( 693.922, 108.944 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 6 )
+
+[node name="sprite_0100" type="Sprite" parent="Imagenes"]
+modulate = Color( 0.584314, 0.152941, 0.152941, 1 )
+position = Vector2( 600.944, 576.984 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 6 )
+
+[node name="sun" type="Sprite" parent="Imagenes"]
+position = Vector2( 865.159, 120.603 )
+scale = Vector2( 2.0482, 1.96434 )
+texture = ExtResource( 8 )
+
+[connection signal="pressed" from="VBoxContainer/BotonMenuPrincipal" to="." method="_on_BotonMenuPrincipal_pressed"]
+[connection signal="pressed" from="VBoxContainer/BotonSalir" to="VBoxContainer/BotonSalir" method="_on_pressed"]

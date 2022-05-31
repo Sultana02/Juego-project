@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Can_t_Be_Stopped_8_bit.ogg-6f6d23e180ca718412bdc3be14f2eaa6.oggstr"
+
+[deps]
+
+source_file="res://recursos/SoundFx/Can_t_Be_Stopped_8_bit.ogg"
+dest_files=[ "res://.import/Can_t_Be_Stopped_8_bit.ogg-6f6d23e180ca718412bdc3be14f2eaa6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

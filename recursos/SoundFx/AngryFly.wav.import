@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/AngryFly.wav-1b6bed84ce23648e60eefcae741fe303.sample"
+
+[deps]
+
+source_file="res://recursos/SoundFx/AngryFly.wav"
+dest_files=[ "res://.import/AngryFly.wav-1b6bed84ce23648e60eefcae741fe303.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
